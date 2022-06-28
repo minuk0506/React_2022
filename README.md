@@ -21,3 +21,4 @@
 
 ## React project 시작하기
 * /workspace/React_2022/create-react-app 프로젝트명
+cmd 에서(npm install -g create-react-app)
