@@ -23,7 +23,6 @@ build/
 
 # eclipse project folder
 .metadata/
-bin/
 tmp/
 target/
 .target/
