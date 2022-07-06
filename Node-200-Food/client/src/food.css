@@ -1,0 +1,18 @@
+table {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  border-collapse: collapse;
+}
+thead {
+  width: 80%;
+}
+th,
+td {
+  border: 1px solid;
+  width: 100%;
+}
+th {
+  border-bottom: none;
+}
