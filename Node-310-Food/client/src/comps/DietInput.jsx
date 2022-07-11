@@ -21,9 +21,38 @@ const DietInput = () => {
     각각 별도 변수로 선언된 속성을 사용하여 food JSON 객체에 값을 담는다
 
     */
-    const [name, value] = e.target;
-    setFood({ ...food, [name]: e.target.vlaue });
+    const { name, value } = e.target;
+    setFood({ ...food, [name]: value });
   };
+
+  // JS ES5 이전 버전에서는 각각의 input box 에
+  // change event 를 별도로 생성하고
+  // d_date : e.target.value 와 같은 코드를 작성해야 한다
+  // 현재 JS 버전에서는 하나의 event 핸들러를 통하여
+  // 사용할 수 있다.
+  // {[name] : 값}
+  const onDateChange = (e) => {
+    setFood({ ...food, d_date: e.target.value });
+  };
+  const onFoodChange = (e) => {
+    setFood({ ...food, d_food: e.target.value });
+  };
+
+  const onClick = async (e) => {
+    const postOption = {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(food),
+    };
+    const res = await fetch("http://localhost:3000/food/insert", postOption);
+    if (res.ok) {
+      const json = await res.json();
+      console.log(json);
+    }
+  };
+
   return (
     <div className="w3-row-padding">
       <div className="w3-col s3">
@@ -63,7 +92,9 @@ const DietInput = () => {
         />
       </div>
       <div className="w3-col s3">
-        <button className="w3-button w3-primary">저장하기</button>
+        <button className="w3-button w3-primary" onClick={onClick}>
+          저장하기
+        </button>
       </div>
     </div>
   );
