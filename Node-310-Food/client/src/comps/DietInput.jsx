@@ -12,6 +12,15 @@ const DietInput = () => {
     d_cal: "",
   });
   const onChange = (e) => {
+    /*
+    input box 에서 내용입력(onChange) 이벤트가 발생하면
+    input box 가 e.target 에 담겨 전달된다
+    input box 의 name 속성과 value 을 분해하여
+    각각 변수에 담기
+    name 변수와 value 변수가 분해되고 각각의 별도 변수로 생성된다
+    각각 별도 변수로 선언된 속성을 사용하여 food JSON 객체에 값을 담는다
+
+    */
     const [name, value] = e.target;
     setFood({ ...food, [name]: e.target.vlaue });
   };
