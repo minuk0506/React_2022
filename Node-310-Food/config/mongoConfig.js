@@ -1,6 +1,5 @@
 const PASSWORD = "!Korea8080";
-const USERNAME = "user1";
-const mongoURL = `mongodb+srv://${USERNAME}:${PASSWORD}@cluster0.c1j88.mongodb.net/?retryWrites=true&w=majority`;
+const mongoURL = `mongodb+srv://user1:${PASSWORD}@cluster0.c1j88.mongodb.net/?retryWrites=true&w=majority`;
 
 import mongoose from "mongoose";
 const Schema = mongoose.Schema;

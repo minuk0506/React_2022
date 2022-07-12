@@ -1,4 +1,5 @@
-import logo from "./logo.svg";
+import logo from "./img2.jpg";
+// import logo from "./logo.svg";
 import "./ReactJS.css";
 import DietMain from "./comps/DietMain";
 
