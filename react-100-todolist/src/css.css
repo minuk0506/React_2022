@@ -1,0 +1,30 @@
+.main-box {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex: 0.5;
+}
+.box-head {
+  background-color: #21b9d0;
+}
+.box-head h1 {
+  color: white;
+}
+.input-Div {
+  padding: 1rem;
+  display: flex;
+}
+.input-input {
+  font-size: 16px;
+  width: 70%;
+  border: none;
+  border-bottom: 1px solid #21b9d0;
+}
+.input-button {
+  background-color: #21b9d0;
+  color: white;
+  margin-left: auto;
+  width: 20%;
+  border: none;
+}
