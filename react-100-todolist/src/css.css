@@ -28,3 +28,9 @@
   width: 20%;
   border: none;
 }
+.line .flag {
+  text-decoration: none;
+}
+.line {
+  text-decoration: line-through;
+}
